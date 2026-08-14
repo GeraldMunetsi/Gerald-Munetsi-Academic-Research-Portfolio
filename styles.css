@@ -516,6 +516,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.12; margin: 0; fo
 }
 .admin-share__row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .admin-share__status { font-size: .8rem; color: var(--emerald); font-family: var(--font-head); font-weight: 500; }
+.admin-share__status.is-error { color: var(--gold-deep); }
 
 .admin-panel__foot {
   display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;

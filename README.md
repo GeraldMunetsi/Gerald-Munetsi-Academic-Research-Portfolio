@@ -77,3 +77,5 @@ subpath (`/<repo>/`) or a root user site.
   different address (currently `germunetsi15@gmail.com` — swap as needed).
 - **Blog posts**: add entries directly to the `POSTS` array in `blog/posts.js`
   following the shape documented at the top of that file, then commit.
+- **Send-for-review email**: see the setup steps at the top of `blog/email-config.js`
+  to enable real one-click sending (free account, no server needed).

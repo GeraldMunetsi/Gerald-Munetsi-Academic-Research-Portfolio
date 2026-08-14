@@ -1,6 +1,7 @@
 // The write/publish panel. This file is never loaded by an ordinary visit —
 // blog.js only fetches it after the hidden key-combo + correct access phrase.
 import { buildDocxBlob } from "./docx.js";
+import { EMAILJS_CONFIG } from "./email-config.js";
 
 export function openEditor({ getLocalPosts, saveLocalPosts, seedPosts, rerender }) {
   if (document.getElementById("gmAdminModal")) return;
@@ -59,9 +60,7 @@ export function openEditor({ getLocalPosts, saveLocalPosts, seedPosts, rerender 
               <button type="button" class="btn btn--ghost btn--sm" id="adminShare">Share as Word doc</button>
               <span class="admin-share__status" id="adminShareStatus"></span>
             </div>
-            <p class="admin-hint">Downloads a .docx of this draft and opens an email addressed to the
-              reviewer — attach the file before sending. Browsers can't attach files to an email
-              automatically, so this is the closest a page can get to doing it for you.</p>
+            <p class="admin-hint" id="adminShareHint">Emails the reviewer a Word doc of this draft directly.</p>
           </div>
         </form>
       </div>
@@ -76,6 +75,11 @@ export function openEditor({ getLocalPosts, saveLocalPosts, seedPosts, rerender 
   const form = overlay.querySelector("#adminForm");
   const listEl = overlay.querySelector("#adminList");
   const shareStatus = overlay.querySelector("#adminShareStatus");
+  const shareHint = overlay.querySelector("#adminShareHint");
+  const emailReady = !!(EMAILJS_CONFIG.publicKey && EMAILJS_CONFIG.serviceId && EMAILJS_CONFIG.templateId);
+  shareHint.textContent = emailReady
+    ? "Emails the reviewer a Word doc of this draft directly."
+    : "Email sending isn't set up yet (see blog/email-config.js), so this downloads the .docx and opens a pre-filled email instead — attach the file before sending.";
 
   function slugify(title) {
     return title.toLowerCase().trim()
@@ -147,7 +151,54 @@ export function openEditor({ getLocalPosts, saveLocalPosts, seedPosts, rerender 
     };
   }
 
-  function setShareStatus(msg) { shareStatus.textContent = msg; }
+  function setShareStatus(msg, isError = false) {
+    shareStatus.textContent = msg;
+    shareStatus.classList.toggle("is-error", isError);
+  }
+
+  function downloadBlob(blob, filename) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click(); a.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  function openMailtoDraft(reviewer, subject, message) {
+    window.location.href = `mailto:${encodeURIComponent(reviewer)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+  }
+
+  function loadEmailJsScript() {
+    return new Promise((resolve, reject) => {
+      if (window.emailjs) { resolve(window.emailjs); return; }
+      const s = document.createElement("script");
+      s.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
+      s.onload = () => resolve(window.emailjs);
+      s.onerror = () => reject(new Error("Could not load the email service."));
+      document.head.appendChild(s);
+    });
+  }
+
+  function blobToDataURL(blob) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(blob);
+    });
+  }
+
+  async function sendViaEmailJS({ reviewer, subject, message, blob }) {
+    const emailjs = await loadEmailJsScript();
+    emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
+    const attachment = await blobToDataURL(blob);
+    return emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, {
+      to_email: reviewer,
+      subject,
+      message,
+      attachment,
+    });
+  }
 
   overlay.querySelector("#adminNew").addEventListener("click", resetForm);
 
@@ -183,28 +234,37 @@ export function openEditor({ getLocalPosts, saveLocalPosts, seedPosts, rerender 
     rerender();
   });
 
-  overlay.querySelector("#adminShare").addEventListener("click", () => {
+  overlay.querySelector("#adminShare").addEventListener("click", async () => {
     const post = currentDraftFromForm();
-    if (!post.title || !post.body.trim()) { setShareStatus("Add a title and body first."); return; }
+    if (!post.title || !post.body.trim()) { setShareStatus("Add a title and body first.", true); return; }
     const reviewer = form.reviewerEmail.value.trim();
+    if (!reviewer) { setShareStatus("Add a reviewer email first.", true); return; }
 
+    const shareBtn = overlay.querySelector("#adminShare");
     const blob = buildDocxBlob(post);
     const filename = `${post.slug || "draft"}-review.docx`;
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url; a.download = filename;
-    document.body.appendChild(a); a.click(); a.remove();
-    URL.revokeObjectURL(url);
+    const subject = `Draft for review: ${post.title}`;
+    const message = `Hi,\n\nWould you take a look at this draft and share your thoughts?\n\n"${post.title}"\n\nThanks,\nGerald`;
 
-    if (reviewer) {
-      const subject = `Draft for review: ${post.title}`;
-      const body = `Hi,\n\nWould you take a look at this draft and let me know your thoughts?\n\n"${post.title}"\n\n(Attaching the Word doc separately.)\n\nThanks,\nGerald`;
-      const mailto = `mailto:${encodeURIComponent(reviewer)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
-      setShareStatus(`Downloaded ${filename} — attach it in the email that just opened.`);
-    } else {
-      setShareStatus(`Downloaded ${filename}. Add a reviewer email to also open a pre-filled email.`);
+    if (emailReady) {
+      shareBtn.disabled = true;
+      setShareStatus("Sending…");
+      try {
+        await sendViaEmailJS({ reviewer, subject, message, blob });
+        setShareStatus(`Sent to ${reviewer}.`);
+      } catch (err) {
+        setShareStatus(`Couldn't send automatically — downloaded instead, attach it yourself. (${(err && err.text) || (err && err.message) || "send failed"})`, true);
+        downloadBlob(blob, filename);
+        openMailtoDraft(reviewer, subject, message);
+      } finally {
+        shareBtn.disabled = false;
+      }
+      return;
     }
+
+    downloadBlob(blob, filename);
+    openMailtoDraft(reviewer, subject, message);
+    setShareStatus(`Downloaded ${filename} — attach it in the email that just opened.`);
   });
 
   overlay.querySelector("#adminExport").addEventListener("click", () => {
@@ -216,12 +276,7 @@ export function openEditor({ getLocalPosts, saveLocalPosts, seedPosts, rerender 
       "// Generated by the blog editor.\n" +
       "// Replace blog/posts.js with this file, then commit & push to publish for everyone.\n" +
       `export const POSTS = ${JSON.stringify(all, null, 2)};\n`;
-    const blob = new Blob([file], { type: "text/javascript" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url; a.download = "posts.js";
-    document.body.appendChild(a); a.click(); a.remove();
-    URL.revokeObjectURL(url);
+    downloadBlob(new Blob([file], { type: "text/javascript" }), "posts.js");
   });
 
   function close() {
