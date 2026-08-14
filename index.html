@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerald Munetsi — Deep Learning Researcher &amp; Infectious Disease Modeler</title>
+  <meta name="description" content="Gerald Munetsi is a deep learning researcher, infectious disease modeler and social entrepreneur building African-owned AI for epidemic surveillance and health decision-making." />
+  <meta name="author" content="Gerald Munetsi" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gerald Munetsi — Deep Learning Researcher & Infectious Disease Modeler" />
+  <meta property="og:description" content="Building African-owned AI for epidemic surveillance and health decision-making." />
+  <meta property="og:image" content="images/hero-portrait.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AC%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#home" class="nav__brand" aria-label="Gerald Munetsi — home">
+        <span class="nav__mark">GM</span>
+        <span class="nav__name">Gerald&nbsp;Munetsi</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#work">Notable Work</a>
+        <a href="#research">Research</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="nav__cta">Contact</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__eyebrow reveal">
+            <span class="dot"></span> University of Cambridge · Mastercard Foundation Scholar
+          </p>
+          <h1 class="hero__title reveal">Gerald Munetsi</h1>
+          <h2 class="hero__role reveal">
+            <span class="hero__role-static">I&nbsp;am&nbsp;a</span>
+            <span class="typewriter" id="typewriter" aria-live="polite"></span>
+          </h2>
+          <p class="hero__lede reveal">
+            I build AI that helps Africa see disease before it spreads — pairing
+            deep learning with infectious-disease modelling, and turning the
+            evidence into policy that reaches the people who need it first.
+          </p>
+
+          <div class="hero__actions reveal">
+            <a href="#work" class="btn btn--primary">View my work</a>
+            <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          </div>
+
+          <ul class="hero__socials reveal" aria-label="Social profiles">
+            <li><a href="https://www.linkedin.com/in/gerald-munetsi-566496219/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/></svg>
+            </a></li>
+            <li><a href="https://github.com/GeraldMunetsi" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 00.5 12a11.5 11.5 0 007.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.4-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.75.81 1.2 1.84 1.2 3.1 0 4.43-2.7 5.4-5.28 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0023.5 12 11.5 11.5 0 0012 .5z"/></svg>
+            </a></li>
+            <li><a href="https://orcid.org/0009-0005-0588-7709" target="_blank" rel="noopener" aria-label="ORCID">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 100 24 12 12 0 000-24zM7.37 18.16H5.9V8.02h1.47zM6.63 6.6a.86.86 0 110-1.72.86.86 0 010 1.72zm12.03 6.53c0 2.9-1.85 5.03-4.9 5.03H9.9V8.02h3.86c2.9 0 4.9 2.06 4.9 5.11zm-1.51 0c0-2.26-1.4-3.72-3.5-3.72h-2.3v7.45h2.3c1.92 0 3.5-1.28 3.5-3.73z"/></svg>
+            </a></li>
+            <li><a href="https://bsky.app/profile/germunetsi15.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 10.8C10.9 8.6 7.9 4.6 5.1 3 2.4 1.5 1.3 2 .6 2.3.1 2.6 0 3.4 0 3.9c0 .5.3 4.3.5 4.9.6 2.1 2.8 2.8 4.9 2.6-3 .4-5.7 1.5-2.2 5.4C7 21 8.4 16.9 9.1 14.8c.3-.9.5-1.4.9-1.4.4 0 .6.5.9 1.4.7 2.1 2.1 6.2 5.9 2 3.5-3.9.8-5-2.2-5.4 2.1.2 4.3-.5 4.9-2.6.2-.6.5-4.4.5-4.9 0-.5 0-1.3-.6-1.6-.7-.3-1.8-.8-4.5.7-2.8 1.6-5.8 5.6-6.9 7.8z"/></svg>
+            </a></li>
+            <li><a href="https://www.instagram.com/germunetsi5/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5 0-4.74.07-1.14.05-1.76.24-2.17.4-.55.2-.94.47-1.35.88-.41.41-.68.8-.88 1.35-.16.41-.35 1.03-.4 2.17C2.4 8.5 2.4 8.85 2.4 12s0 3.5.07 4.74c.05 1.14.24 1.76.4 2.17.2.55.47.94.88 1.35.41.41.8.68 1.35.88.41.16 1.03.35 2.17.4 1.24.07 1.59.07 4.74.07s3.5 0 4.74-.07c1.14-.05 1.76-.24 2.17-.4.55-.2.94-.47 1.35-.88.41-.41.68-.8.88-1.35.16-.41.35-1.03.4-2.17.07-1.24.07-1.59.07-4.74s0-3.5-.07-4.74c-.05-1.14-.24-1.76-.4-2.17-.2-.55-.47-.94-.88-1.35-.41-.41-.8-.68-1.35-.88-.41-.16-1.03-.35-2.17-.4C15.5 4 15.15 4 12 4zm0 3.06A4.94 4.94 0 1012 17a4.94 4.94 0 000-9.88zm0 8.14A3.2 3.2 0 1112 8.8a3.2 3.2 0 010 6.4zm6.3-8.34a1.15 1.15 0 11-2.3 0 1.15 1.15 0 012.3 0z"/></svg>
+            </a></li>
+            <li><a href="https://www.facebook.com/germunetsi15" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.3 0-1.3-.1-2.46-.1-2.44 0-4.11 1.49-4.11 4.22V9.9H7.7V13h2.73v8z"/></svg>
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="hero__portrait reveal">
+          <div class="hero__portrait-frame">
+            <img src="images/hero-portrait.jpg" alt="Gerald Munetsi" loading="eager"
+                 onerror="this.closest('.hero__portrait-frame').classList.add('img-fallback')" />
+          </div>
+          <div class="hero__badge">
+            <strong>MPhil</strong>
+            <span>Population Health Sciences · Cambridge</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll to about">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- Marquee of themes -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Deep Learning</span><span>·</span>
+        <span>Agent-Based Models</span><span>·</span>
+        <span>Bayesian Inference</span><span>·</span>
+        <span>Phylodynamics</span><span>·</span>
+        <span>One Health</span><span>·</span>
+        <span>Epidemic Emulation</span><span>·</span>
+        <span>Health Policy</span><span>·</span>
+        <span>Social Entrepreneurship</span><span>·</span>
+        <span>Deep Learning</span><span>·</span>
+        <span>Agent-Based Models</span><span>·</span>
+        <span>Bayesian Inference</span><span>·</span>
+        <span>Phylodynamics</span><span>·</span>
+        <span>One Health</span><span>·</span>
+        <span>Epidemic Emulation</span><span>·</span>
+        <span>Health Policy</span><span>·</span>
+        <span>Social Entrepreneurship</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <img src="images/wolfson-gown.jpg" alt="Gerald Munetsi at Wolfson College, University of Cambridge"
+               onerror="this.closest('.about__media').classList.add('img-fallback')" />
+          <div class="about__media-tag">Wolfson College · Cambridge</div>
+        </div>
+
+        <div class="about__body">
+          <p class="section__kicker reveal">About</p>
+          <h2 class="section__title reveal">Where machine learning meets public health</h2>
+
+          <div class="about__prose reveal">
+            <p>
+              Gerald Munetsi is a Zimbabwean researcher working at the intersection of
+              <strong>deep learning</strong>, <strong>infectious-disease modelling</strong> and
+              <strong>social entrepreneurship</strong>. He is a Mastercard Foundation Scholar
+              reading for an MPhil in Population Health Sciences at the University of Cambridge,
+              having earned his first degree in applied mathematics and operations research at the
+              University of Zimbabwe.
+            </p>
+            <p>
+              His research asks a practical question: how do we make epidemic models fast, honest
+              and usable enough for the people making real decisions? That has taken him from
+              <strong>emulating agent-based epidemic models</strong> and
+              <strong>neural Bayesian inference for phylodynamics</strong>, to the operations
+              research that helps smallholder farmers allocate scarce land and transport.
+            </p>
+            <p>
+              Beyond the models, Gerald is a builder. Through fellowships in policy and AI, he is
+              prototyping an <strong>African-owned, AI-enhanced One Health surveillance system</strong> —
+              so that a district officer can act on a zoonotic spillover signal in real time,
+              not months later.
+            </p>
+          </div>
+
+          <div class="about__stats reveal">
+            <div class="stat">
+              <span class="stat__num" data-count="4">0</span>
+              <span class="stat__label">Papers &amp; conferences</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="3">0</span>
+              <span class="stat__label">Fellowships &amp; awards</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="3">0</span>
+              <span class="stat__label">Learned societies</span>
+            </div>
+          </div>
+
+          <div class="about__tags reveal">
+            <span>Python</span><span>PyTorch</span><span>R</span><span>Bayesian Statistics</span>
+            <span>Agent-Based Modelling</span><span>Genomic Epidemiology</span><span>Operations Research</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notable Work -->
+    <section class="section work" id="work">
+      <div class="container">
+        <p class="section__kicker reveal">Notable Work</p>
+        <h2 class="section__title reveal">Papers, policy &amp; recognition</h2>
+
+        <!-- Academic papers & conferences -->
+        <div class="work__block reveal">
+          <div class="work__head">
+            <h3><span class="work__ico">📄</span> Academic Papers &amp; Conferences</h3>
+          </div>
+          <ol class="timeline">
+            <li class="timeline__item">
+              <span class="timeline__year">2025&ndash;26</span>
+              <div class="timeline__content">
+                <h4>Emulation strategies for epidemic agent-based models</h4>
+                <p>Making computationally expensive agent-based epidemic simulators fast enough to answer real-time policy questions.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__year">2026</span>
+              <div class="timeline__content">
+                <h4>HDR-UK Early Career Conference</h4>
+                <p>Health Data Research UK · United Kingdom.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__year">2026</span>
+              <div class="timeline__content">
+                <h4>Neural Inference for Bayesian Phylodynamics &amp; Genetic Epidemiology</h4>
+                <p>Deep-learning approaches to Bayesian inference over pathogen genomes · United Kingdom.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__year">2024</span>
+              <div class="timeline__content">
+                <h4>Operations research techniques for the land allocation &amp; transport problem in small-scale farming</h4>
+                <p>Applied optimisation for smallholder agriculture · Zimbabwe.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Policy & advocacy -->
+        <div class="work__block reveal">
+          <div class="work__head">
+            <h3><span class="work__ico">🌍</span> Policy &amp; Advocacy</h3>
+            <span class="pill">iPEP Fellowship · 2026&ndash;27</span>
+          </div>
+          <div class="callout">
+            <p>
+              Working with policymakers from the <strong>Institute of National Planning, Egypt</strong>
+              to generate evidence across the ministerial conditions and governance frameworks
+              required to prototype an <strong>African-owned, AI-enhanced One Health surveillance
+              system</strong> — enabling district officers to act on zoonotic spillover signals in
+              real time.
+            </p>
+          </div>
+        </div>
+
+        <div class="work__two">
+          <!-- Awards -->
+          <div class="work__block reveal">
+            <div class="work__head">
+              <h3><span class="work__ico">🏆</span> Awards &amp; Recognition</h3>
+            </div>
+            <ul class="cards">
+              <li class="card">
+                <span class="card__year">2026</span>
+                <h4>Individual Policy-Exchange Programme (iPEP)</h4>
+              </li>
+              <li class="card">
+                <span class="card__year">2025</span>
+                <h4>Mastercard Foundation Scholarship</h4>
+                <p>University of Cambridge</p>
+              </li>
+              <li class="card">
+                <span class="card__year">2024</span>
+                <h4>CreFund AI Fellowship</h4>
+                <p>United States</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Affiliations -->
+          <div class="work__block reveal">
+            <div class="work__head">
+              <h3><span class="work__ico">🤝</span> Affiliations</h3>
+            </div>
+            <ul class="affil">
+              <li>Royal Statistical Society <span>(RSS)</span></li>
+              <li>Zimbabwe Infectious Disease Modelling Consortium</li>
+              <li>International Biometric Society <span>(IBS)</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research / GitHub projects -->
+    <section class="section research" id="research">
+      <div class="container">
+        <p class="section__kicker reveal">Research &amp; Code</p>
+        <h2 class="section__title reveal">Selected projects</h2>
+        <p class="section__intro reveal">
+          A sample of open work — from epidemic emulators to genomic classifiers. Full source is on
+          <a href="https://github.com/GeraldMunetsi" target="_blank" rel="noopener">GitHub</a>.
+        </p>
+
+        <div class="proj-grid">
+          <article class="proj reveal">
+            <div class="proj__top">
+              <span class="proj__lang"><i style="--c:#3572A5"></i> Jupyter · Python</span>
+              <span class="proj__tag">Epidemic modelling</span>
+            </div>
+            <h3>Agent-Based Model Emulator</h3>
+            <p>Surrogate models that emulate expensive stochastic epidemic ABMs, so inference and scenario analysis run in seconds rather than hours.</p>
+            <a class="proj__link" href="https://github.com/GeraldMunetsi" target="_blank" rel="noopener">View on GitHub →</a>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__top">
+              <span class="proj__lang"><i style="--c:#3572A5"></i> Python · PyTorch</span>
+              <span class="proj__tag">Bayesian deep learning</span>
+            </div>
+            <h3>Neural Bayesian Phylodynamics</h3>
+            <p>Simulation-based / neural inference for phylodynamic and genetic-epidemiology models, learning posteriors over pathogen transmission from genomic data.</p>
+            <a class="proj__link" href="https://github.com/GeraldMunetsi" target="_blank" rel="noopener">View on GitHub →</a>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__top">
+              <span class="proj__lang"><i style="--c:#3572A5"></i> Jupyter · Python</span>
+              <span class="proj__tag">Genomics</span>
+            </div>
+            <h3>Pan-Cancer Classification</h3>
+            <p>Multi-class classification of cancer type from high-dimensional genomic expression data using machine-learning pipelines.</p>
+            <a class="proj__link" href="https://github.com/GeraldMunetsi" target="_blank" rel="noopener">View on GitHub →</a>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__top">
+              <span class="proj__lang"><i style="--c:#198CE7"></i> R</span>
+              <span class="proj__tag">Health impact assessment</span>
+            </div>
+            <h3>Diet &amp; Health Policy Modelling</h3>
+            <p>Comparative risk-assessment modelling of dietary policy scenarios and their projected population-health impact.</p>
+            <a class="proj__link" href="https://github.com/GeraldMunetsi" target="_blank" rel="noopener">View on GitHub →</a>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__top">
+              <span class="proj__lang"><i style="--c:#F1E05A"></i> Optimisation · Python</span>
+              <span class="proj__tag">Operations research</span>
+            </div>
+            <h3>Land Allocation &amp; Transport</h3>
+            <p>Linear/optimisation models to solve the land-allocation and transport problem for small-scale farming in Zimbabwe.</p>
+            <a class="proj__link" href="https://github.com/GeraldMunetsi" target="_blank" rel="noopener">View on GitHub →</a>
+          </article>
+
+          <article class="proj proj--cta reveal">
+            <h3>More on GitHub</h3>
+            <p>Notebooks, experiments and research code across epidemiology, ML and statistics.</p>
+            <a class="btn btn--ghost btn--sm" href="https://github.com/GeraldMunetsi" target="_blank" rel="noopener">@GeraldMunetsi</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <p class="section__kicker reveal">Gallery</p>
+        <h2 class="section__title reveal">Moments &amp; milestones</h2>
+        <p class="section__intro reveal">Cambridge, conferences, community and the road here.</p>
+
+        <div class="gallery__grid" id="galleryGrid">
+          <!-- items injected/enhanced by JS; markup below is the source of truth -->
+          <figure class="gal reveal" data-span="tall">
+            <img loading="lazy" src="images/uz-graduation.jpg" alt="Graduation at the University of Zimbabwe" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>University of Zimbabwe · Graduation</figcaption>
+          </figure>
+          <figure class="gal reveal">
+            <img loading="lazy" src="images/presenting-abm.jpg" alt="Gerald presenting on agent-based models" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>Presenting agent-based models</figcaption>
+          </figure>
+          <figure class="gal reveal">
+            <img loading="lazy" src="images/social-ventures-badge.jpg" alt="Cambridge Social Ventures Residential 2026 badge" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>Cambridge Social Ventures Residential 2026</figcaption>
+          </figure>
+          <figure class="gal reveal" data-span="wide">
+            <img loading="lazy" src="images/kings-college.jpg" alt="At King's College, Cambridge" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>King&rsquo;s College · Cambridge</figcaption>
+          </figure>
+          <figure class="gal reveal">
+            <img loading="lazy" src="images/astrazeneca.jpg" alt="Visiting AstraZeneca" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>AstraZeneca</figcaption>
+          </figure>
+          <figure class="gal reveal">
+            <img loading="lazy" src="images/oxford-campus.jpg" alt="University of Oxford Old Road Campus" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>University of Oxford · Old Road Campus</figcaption>
+          </figure>
+          <figure class="gal reveal" data-span="tall">
+            <img loading="lazy" src="images/wolfson-formal-hall.jpg" alt="Formal hall at Wolfson College" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>Formal Hall · Wolfson College</figcaption>
+          </figure>
+          <figure class="gal reveal">
+            <img loading="lazy" src="images/africa-disruption.jpg" alt="Africa in the Age of Disruption conference, Cambridge" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>Africa in the Age of Disruption · Cambridge</figcaption>
+          </figure>
+          <figure class="gal reveal">
+            <img loading="lazy" src="images/alo-podium.jpg" alt="Speaking at an African Leadership Organization event" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>African Business Leadership Awards</figcaption>
+          </figure>
+          <figure class="gal reveal" data-span="wide">
+            <img loading="lazy" src="images/alo-group-president.jpg" alt="With leaders at the African Leadership Organization" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>African Leadership Organization</figcaption>
+          </figure>
+          <figure class="gal reveal">
+            <img loading="lazy" src="images/hackathon.jpg" alt="Collaborating at a data workshop" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>Data workshop · collaboration</figcaption>
+          </figure>
+          <figure class="gal reveal">
+            <img loading="lazy" src="images/cambridge-christmas.jpg" alt="With friends in Cambridge" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>Community · Cambridge</figcaption>
+          </figure>
+          <figure class="gal reveal" data-span="wide">
+            <img loading="lazy" src="images/african-dinner.jpg" alt="African students' formal dinner" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>African community · formal dinner</figcaption>
+          </figure>
+          <figure class="gal reveal" data-span="tall">
+            <img loading="lazy" src="images/pitt-rivers.jpg" alt="At the Pitt Rivers Museum, Oxford" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>Pitt Rivers Museum · Oxford</figcaption>
+          </figure>
+          <figure class="gal reveal">
+            <img loading="lazy" src="images/networking-flag.jpg" alt="Networking with a Zimbabwean dignitary" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>Networking · leadership circles</figcaption>
+          </figure>
+          <figure class="gal reveal">
+            <img loading="lazy" src="images/alo-banner.jpg" alt="At the African Leadership Organization" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>African Leadership Organization</figcaption>
+          </figure>
+          <figure class="gal reveal">
+            <img loading="lazy" src="images/matriculation.jpg" alt="Cambridge and Wolfson College matriculation declaration" onerror="this.closest('.gal').classList.add('img-fallback')" />
+            <figcaption>Matriculation · Cambridge &amp; Wolfson</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container contact__inner">
+        <div class="contact__text reveal">
+          <p class="section__kicker">Contact</p>
+          <h2 class="section__title">Let&rsquo;s build something that matters</h2>
+          <p class="contact__lede">
+            Open to research collaborations, speaking, policy work and partnerships across
+            AI, epidemiology and global health. The fastest way to reach me is email or LinkedIn.
+          </p>
+          <a href="mailto:germunetsi15@gmail.com" class="contact__email">germunetsi15@gmail.com</a>
+
+          <ul class="contact__socials" aria-label="Profiles">
+            <li><a href="https://www.linkedin.com/in/gerald-munetsi-566496219/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/GeraldMunetsi" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://orcid.org/0009-0005-0588-7709" target="_blank" rel="noopener">ORCID</a></li>
+            <li><a href="https://bsky.app/profile/germunetsi15.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
+            <li><a href="https://www.instagram.com/germunetsi5/?hl=en" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/germunetsi15" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+
+        <div class="contact__card reveal">
+          <h3>At a glance</h3>
+          <dl>
+            <div><dt>Based in</dt><dd>Cambridge, UK · Zimbabwe</dd></div>
+            <div><dt>Focus</dt><dd>Deep learning · Disease modelling</dd></div>
+            <div><dt>Currently</dt><dd>MPhil, University of Cambridge</dd></div>
+            <div><dt>Open to</dt><dd>Research · Policy · Speaking</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Gerald Munetsi</span>
+      <span class="footer__made">Deep Learning Researcher · Infectious Disease Modeler · Social Entrepreneur</span>
+      <a href="#home" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img id="lightboxImg" src="" alt="" />
+    <p id="lightboxCap"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
