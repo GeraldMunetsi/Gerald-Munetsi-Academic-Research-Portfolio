@@ -29,6 +29,16 @@ missing simply shows a tasteful coloured placeholder, so nothing ever looks brok
 | `networking-flag.jpg` | Standing with the dignitary wearing the Zimbabwe-flag lapel pin | Gallery |
 | `alo-banner.jpg` | Standing beside a dignitary at the African Leadership Organization banner | Gallery |
 | `matriculation.jpg` | The Cambridge / Wolfson College "Matriculation Declaration" sheet | Gallery |
+| `hdr-uk-office.jpg` | Standing in front of the "HDR UK — Health Data Research UK" sign, black sherpa-collar jacket | Gallery |
+| `kings-cross-selfie.jpg` | Selfie with a colleague (sunglasses, cream sweater) in front of St Pancras clock tower | Gallery |
+| `hdruk-futures-event.jpg` | Green lanyard, purple doors, HDR UK "Futures" training banner and QR-code screen behind | Gallery (tall) |
+| `workshop-group-photo.jpg` | Large group photo (~20 people) against a wood-panelled wall, research workshop | Gallery (wide) |
+| `cambridge-health-futures.jpg` | Standing before the "Cambridge Health Futures Conference, 21st & 22nd March 2026" screen | Gallery (tall) |
+| `global-power-forum.jpg` | Three men in navy suits in front of the "Global Power Forum" / Wolfson College Cambridge banner | Gallery (wide) |
+| `social-venture-winners.jpg` | Holding a "Winner — Cambridge Social Venture Residential 2026" certificate with two others | Gallery |
+| `navy-suit-fire-action.jpg` | Navy suit, black shirt, by the "Fire action" sign and the colourful abstract painting | Gallery |
+| `navy-suit-sofa-seated.jpg` | Seated portrait on a peach tufted sofa, navy suit, legs crossed | Gallery |
+| `erica-poster-discussion.jpg` | Listening to a research poster presentation ("ERICA" — AI in imaging communications) | Gallery |
 
 ## Still spare?
 
