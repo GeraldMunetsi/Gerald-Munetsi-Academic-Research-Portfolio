@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo \"=== Desktop ===\"; ls \"C:/Users/ke_or/OneDrive/Desktop\" 2>/dev/null | head -40; echo \"=== Downloads ===\"; ls \"C:/Users/ke_or/Downloads\" 2>/dev/null | head -40; echo \"=== Pictures ===\"; ls \"C:/Users/ke_or/Pictures\" 2>/dev/null | head -40)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:orcid.org)",
+      "Bash(echo \"=== scratchpad ===\"; ls -la \"C:/Users/ke_or/AppData/Local/Temp/claude/C--Users-ke-or-OneDrive-Desktop-Gerald-Munetsi-Portfolio/9717667a-5ee4-4a5c-9d6b-131caa87ceac/scratchpad\" 2>/dev/null; echo \"=== recent images in Temp/claude ===\"; find \"C:/Users/ke_or/AppData/Local/Temp/claude\" -type f \\\\\\( -iname \"*.jpg\" -o -iname \"*.jpeg\" -o -iname \"*.png\" \\\\\\) -newermt \"2026-08-14 00:00\" 2>/dev/null | head; echo \"=== images modified today in Downloads ===\"; find \"C:/Users/ke_or/Downloads\" -maxdepth 1 -type f \\\\\\( -iname \"*.jpg\" -o -iname \"*.jpeg\" -o -iname \"*.png\" \\\\\\) -newermt \"2026-08-13\" 2>/dev/null | head -20)",
+      "Bash(python -m http.server 8123)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8123/)",
+      "Bash(pkill -f \"http.server 8123\")",
+      "Bash(python \"C:/Users/ke_or/AppData/Local/Temp/claude/C--Users-ke-or-OneDrive-Desktop-Gerald-Munetsi-Portfolio/9717667a-5ee4-4a5c-9d6b-131caa87ceac/scratchpad/serve.py\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8124/blog/blog.js)",
+      "Bash(curl -sI http://localhost:8124/blog/blog.js)",
+      "Bash(pkill -f \"http.server\")",
+      "Bash(pkill -f \"serve.py\")",
+      "Bash(git add *)",
+      "Bash(git -c 'user.name=Gerald Munetsi' -c user.email=germunetsi15@gmail.com commit -q -m 'Add blog with hidden publishing, drop emojis/logo mark, new favicon *)",
+      "Bash(git --no-pager log --oneline)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8124/blog.html)",
+      "Bash(git -c 'user.name=Gerald Munetsi' -c user.email=germunetsi15@gmail.com commit -q -m 'Editor: drafts filter, and share-for-review as a real .docx *)",
+      "WebSearch",
+      "WebFetch(domain:www.emailjs.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(git -c 'user.name=Gerald Munetsi' -c user.email=germunetsi15@gmail.com commit -q -m 'Blog: drop intro line; real one-click email sending via EmailJS *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8124/)",
+      "Bash(git -c 'user.name=Gerald Munetsi' -c user.email=germunetsi15@gmail.com commit -q -m 'Gallery: add 10 more photo slots *)"
+    ]
+  }
+}
