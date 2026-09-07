@@ -28,6 +28,19 @@ placeholder rather than showing a broken image.
 | `hdr-uk-office.jpg` | HDR UK office sign, black sherpa-collar jacket |
 | `hdruk-futures-event.jpg` | Green lanyard, purple doors, HDR UK "Futures" training banner |
 | `cambridge-health-futures.jpg` | Cambridge Health Futures Conference screen |
+| `mrc-biostatistics-unit.jpg` | Whiteboard of model derivations, MRC Biostatistics Unit screen, Cambridge |
+
+## Gallery — Africa Pandemic Science Annual Meeting
+### CLEAR-Africa Consortium · Oxford, 2026
+
+| Filename | Photo |
+|---|---|
+| `clear-africa-group.jpg` | Group photo at the "Africa Pandemic Sciences Collaborative" step-and-repeat wall |
+| `clear-africa-presenting.jpg` | Presenting the "iPEP & CLEAR AFRICA Consortium Goals" slide |
+| `clear-africa-outcomes-slide.jpg` | "Outcomes and Impact" slide during a talk |
+| `clear-africa-working-session.jpg` | Three colleagues at laptops in a working session |
+| `clear-africa-banner.jpg` | Standing by the CLEAR-Africa consortium roll-up banner |
+| `oxford-selfie-2026.jpg` | Selfie on an Oxford street (Blackwell's Booksellers) |
 
 ## Gallery — Conferences & Leadership
 
@@ -41,6 +54,13 @@ placeholder rather than showing a broken image.
 | `networking-flag.jpg` | Standing with the dignitary wearing the Zimbabwe-flag lapel pin |
 | `global-power-forum.jpg` | Three men in navy suits, Global Power Forum / Wolfson College banner |
 | `african-dinner.jpg` | Group of men in formal wear at an African students' dinner |
+| `alo-certificate-presentation.jpg` | A certificate being presented on stage at an ALO event |
+| `london-westminster-alm.jpg` | By the Thames in London, "ALM Team" visitor badge |
+| `african-dinner-2.jpg` | Another moment from the same African students' formal dinner |
+| `global-power-forum-group.jpg` | Four colleagues at the Global Power Forum, Wolfson College |
+| `celd-banner.jpg` | Beside the "Center for Economic & Leadership Development" banner |
+| `global-power-women-forum.jpg` | Beside the "Global Power Women Forum" banner |
+| `mastercard-talk-graphic.jpg` | Event graphic: speaking on the Mastercard Foundation Scholarship & Cambridge Experience |
 
 ## Gallery — Awards & Recognition
 
@@ -49,7 +69,7 @@ placeholder rather than showing a broken image.
 | `social-ventures-badge.jpg` | Cambridge Social Ventures Residential 2026 lanyard/badge |
 | `social-venture-winners.jpg` | Holding a "Winner — Cambridge Social Venture Residential 2026" certificate |
 
-## Gallery — Cambridge Milestones
+## Gallery — Education
 
 | Filename | Photo |
 |---|---|
@@ -58,6 +78,7 @@ placeholder rather than showing a broken image.
 | `wolfson-formal-hall.jpg` | In gown at Formal Hall (long dining tables, red chairs) |
 | `kings-college.jpg` | Standing with two others in front of King's College, Cambridge |
 | `cambridge-christmas.jpg` | With two others in front of the tall Christmas tree in Cambridge |
+| `cambridge-cohort-dinner.jpg` | Aerial shot of a formal hall dinner with the wider cohort |
 
 ## Gallery — Travel & Portraits
 

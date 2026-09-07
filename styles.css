@@ -334,6 +334,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.12; margin: 0; fo
   display: flex; align-items: center; gap: 14px; margin: 0;
 }
 .gallery__category-title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.gallery__category-sub { margin: 6px 0 0; font-family: var(--font-head); font-size: .82rem; color: var(--muted); }
 .gallery__grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 16px; margin-top: 22px; }
 .gal { position: relative; margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); cursor: pointer; background: linear-gradient(135deg, var(--indigo), var(--emerald)); }
 .gal[data-span="wide"] { grid-column: span 2; }
